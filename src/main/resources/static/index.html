@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<script src="index.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Bestilling av kinobilletter</title>
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h1>Bestilling av kinobilletter</h1>
+            <form class="form">
+                <div class="form-group">
+                    <label for="film">Velg film:</label>
+                    <select id="film">
+                        <option value="The Boy and the Heron">The Boy and the Heron</option>
+                        <option value="Prinsesse Mononoke">Prinsesse Mononoke</option>
+                        <option value="Past Lives">Past Lives</option>
+                        <option value="Pitch Perfect">Pitch Perfect</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="antall">Antall billetter</label>
+                    <input type="number" class="form-control" min="1" id="antall"/>
+                </div>
+                <div class="form-group">
+                    <label for="fornavn">Fornavn</label>
+                    <input type="text" class="form-control" id="fornavn"/>
+                </div>
+                <div class="form-group">
+                    <label for="etternavn">Etternavn</label>
+                    <input type="text" class="form-control" id="etternavn"/>
+                </div>
+                <div class="form-group">
+                    <label for="epost">Epost</label>
+                    <input type="text" class="form-control" id="epost"/>
+                </div>
+                <div class="form-group">
+                    <label for="telefonnr">Telefonnummer</label>
+                    <input type="text" class="form-control" id="telefonnr"/>
+                </div>
+            </form>
+            <button class="btn btn-primary" onclick="regBillett()">Kjøp billetter</button><br/>
+        </div>
+        <div class="col-md-8">
+            <h3>Alle billettene:</h3>
+            <div id="billettene" class="table-responsive"></div>
+            <button class="btn btn-danger" onclick="slettAlle()">Slett alle billetter</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
